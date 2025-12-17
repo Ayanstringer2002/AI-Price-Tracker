@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import {Button} from "@/components/ui/button";
 import { LogIn, Rabbit, Shield, Bell } from "lucide-react";
+import AddProductForm from "@/components/AddProductForm";
 export default function Home() {
   const user = null;
   const products = [];
@@ -47,7 +48,8 @@ export default function Home() {
         className="bg-orange-500 hover:bg-orange-600 gap-2"
         > 
         <LogIn className="w-4 h-4"></LogIn>
-        Sign in </Button>
+        Sign in 
+        </Button>
 
 
       </div>
@@ -66,6 +68,7 @@ export default function Home() {
           prices drop. Save money effortlessly.
         </p>
         {/* Add Products From */}
+        <AddProductForm user={user}></AddProductForm>
 
         {/* Features*/}
         {products.length === 0 && (
